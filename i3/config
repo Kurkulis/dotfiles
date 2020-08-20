@@ -162,7 +162,7 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 3
 gaps inner 20
 
-# Focus follows muse
+# Focus follows mouse
 focus_follows_mouse no
 
 # Start i3bar to display a workspace bar (plus the system information i3status
