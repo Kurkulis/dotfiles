@@ -193,3 +193,8 @@ client.urgent           #ac4142 #ac4142 #1d1f21 #900000   #ac4142
 client.placeholder      #000000 #0c0c0c #1d1f21 #000000   #0c0c0c
 
 client.background       #ffffff
+
+# Always float these apps
+for_window [class="Nautilus"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [class="calculator"] floating enable
