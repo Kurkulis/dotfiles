@@ -172,12 +172,12 @@ bar {
         position top
         height 30
         tray_padding 5
-        separator_symbol "|"
+        separator_symbol " "
 
         colors {
         background #1d1f21
         statusline #ebdbb2
-        separator #90a959
+        separator #1d1f21
 
         #class             border  backgr. text
         focused_workspace  #90a959 #90a959 #1d1f21
