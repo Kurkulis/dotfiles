@@ -11,6 +11,9 @@ font pango: JetBrains Mono 10
 # Lock the screen after inactivity
 exec_always --no-startup-id xautolock -time 60 -locker "i3lock -c 000000"
 
+# Lock the screen immediately
+bindsym $mod+Control+l exec i3lock -c 000000
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
