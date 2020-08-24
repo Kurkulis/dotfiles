@@ -159,7 +159,7 @@ bindsym $mod+r mode "resize"
 
 # Gaps
 for_window [class=".*"] border pixel 1
-gaps inner 20
+#gaps inner 20
 
 # Focus follows mouse
 focus_follows_mouse no
