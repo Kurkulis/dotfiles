@@ -138,16 +138,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym odiaeresis resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -179,7 +173,7 @@ bar {
         separator #1d1f21
 
         #class             border  backgr. text
-        focused_workspace  #90a959 #90a959 #1d1f21
+        focused_workspace  #ebdbb2 #ebdbb2 #1d1f21
         active_workspace   #333333 #5f676a #ffffff
         inactive_workspace #1d1f21 #1d1f21 #ebdbb2
         urgent_workspace   #ac4142 #ac4142 #1d1f21
