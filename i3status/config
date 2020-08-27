@@ -11,16 +11,11 @@ general {
         interval = 5
 }
 
-order += "cpu_usage"
 order += "volume master"
 order += "tztime local"
 
-cpu_usage {
-        format = "cpu %usage"
-}
-
 volume master {
-        format = "vol %volume"
+        format = "♪ %volume"
         format_muted = "muted (%volume)"
         device = "default"
         mixer = "Master"
