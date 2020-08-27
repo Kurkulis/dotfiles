@@ -8,6 +8,9 @@ font pango: JetBrains Mono 10
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# Launch Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # Lock the screen after inactivity
 exec_always --no-startup-id xautolock -time 60 -locker "i3lock -c 000000"
 
@@ -19,7 +22,7 @@ bindsym $mod+Control+l exec i3lock -c 000000
 exec --no-startup-id nm-applet
 
 # Set desktop background with feh
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/bigsur.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/111112.png
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -160,25 +163,25 @@ focus_follows_mouse no
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-        position top
-        height 30
-        tray_padding 5
-        separator_symbol " "
+#bar {
+#        status_command i3status
+#        position top
+#        height 30
+#        tray_padding 5
+#        separator_symbol " "
 
-        colors {
-        background #1d1f21
-        statusline #ebdbb2
-        separator #1d1f21
+#        colors {
+#        background #111112
+#        statusline #ebdbb2
+#        separator #1d1f21
 
         #class             border  backgr. text
-        focused_workspace  #ebdbb2 #ebdbb2 #1d1f21
-        active_workspace   #333333 #5f676a #ffffff
-        inactive_workspace #1d1f21 #1d1f21 #ebdbb2
-        urgent_workspace   #ac4142 #ac4142 #1d1f21
-    }
-}
+#        focused_workspace  #ebdbb2 #ebdbb2 #1d1f21
+#        active_workspace   #333333 #5f676a #ffffff
+#        inactive_workspace #111112 #111112 #ebdbb2
+#        urgent_workspace   #ac4142 #ac4142 #1d1f21
+#    }
+#}
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #f4bf75 #f4bf75 #1d1f21 #2e9ef4   #f4bf75
