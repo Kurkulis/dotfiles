@@ -40,8 +40,8 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+space exec rofi albert toggle
+# toggle albert
+bindsym $mod+space exec albert toggle
 
 # Move focus
 bindsym $mod+Control+Left focus left
