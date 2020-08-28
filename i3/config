@@ -40,8 +40,8 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+q kill
 
-# toggle albert
-bindsym $mod+space exec albert toggle
+# toggle rofi
+bindsym $mod+space exec rofi -show run
 
 # Move focus
 bindsym $mod+Control+Left focus left
