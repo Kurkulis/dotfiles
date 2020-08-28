@@ -27,7 +27,7 @@ modules-left =
 modules-center = i3
 modules-right = date pulseaudio cpu memory
 
-tray-position = right
+tray-position = left
 tray-padding = 5
 
 [module/i3]
