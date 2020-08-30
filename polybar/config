@@ -21,13 +21,15 @@ line-color = #f00
 module-margin-left = 1
 module-margin-right = 1
 
+padding-right = 2
+
 font-0 = "JetBrains Mono:pixelsize=10;0"
 
-modules-left = 
-modules-center = i3
-modules-right = date pulseaudio cpu memory
+modules-left = i3 
+modules-center = date
+modules-right = pulseaudio cpu memory
 
-tray-position = left
+tray-position = none
 tray-padding = 5
 
 [module/i3]
@@ -42,9 +44,9 @@ label-mode-background = ${colors.alert}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.primary}
-label-focused-underline = ${colors.background}
+label-focused-foreground = ${colors.primary}
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -55,6 +57,7 @@ label-unfocused-padding = 2
 label-visible = %index%
 label-visible-foreground = ${self.label-focused-foreground}
 label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = 2
 
 ; urgent = Workspace with urgency hint set
@@ -82,6 +85,7 @@ time = %H:%M
 
 
 label = %date% %time%
+
 
 [module/pulseaudio]
 type = internal/pulseaudio
