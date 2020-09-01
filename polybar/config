@@ -13,7 +13,7 @@ height = 30
 offset-x = 35%
 offset-y = 10
 fixed-center = true
-; override-redirect = true
+override-redirect = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
