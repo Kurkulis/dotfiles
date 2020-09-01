@@ -1,0 +1,102 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	kitty
+
+# program launcher
+super + space
+	rofi -show drun
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + shift + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + q
+	bspc node -{c,k}
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the window in the given direction
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -{f} {west,south,north,east}
+
+# swap the window in the given direction
+super + alt + {Left,Down,Up,Right}
+	bspc node -{s} {west,south,north,east}
+
+
+# focus the next/previous desktop in the current monitor
+super + {Left,Right}
+	bspc desktop -f {prev,next}.local
+
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + c
+	bspc node -p cancel
+
+#
+# resize
+#
+
+# expand a window by moving one of its side outward
+shift + alt + {Left,Down,Up,Right}
+	bspc node -z {left -100 0,bottom 0 100,top 0 -100,right 100 0}
+
+# contract a window by moving one of its side inward
+super + shift + {Left,Down,Up,Right}
+	bspc node -z {right -100 0,top 0 100,bottom 0 -100,left 100 0}
+
+
+#
+# volume controls
+#
+
+# use volume keys to control pulseaudio
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +2%
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -2%
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SOURCE@ toggle
