@@ -8,29 +8,56 @@ secondary = #e60053
 alert = #ac4142
 
 [bar/example]
-width = 100%
-height = 27
+width = 30%
+height = 30
+offset-x = 35%
+offset-y = 10
 fixed-center = true
+; override-redirect = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 2
 line-color = #f00
 
 module-margin-left = 1
 module-margin-right = 1
 
-padding-right = 2
+padding-right = 1
+padding-left = 1
 
-font-0 = "JetBrains Mono:pixelsize=10;0"
+radius = 5
 
-modules-left = i3 
-modules-center = date
-modules-right = pulseaudio cpu memory
+font-0 = "JetBrains Mono:pixelsize=10;2"
+
+modules-left = cpu pulseaudio 
+modules-center = i3 bspwm
+modules-right = date
 
 tray-position = none
 tray-padding = 5
+
+wm-restack = bspwm
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
@@ -99,6 +126,7 @@ label-muted-foreground = ${colors.alert}
 
 [settings]
 screenchange-reload = true
+pseudo-transparency = true
 
 [global/wm]
 margin-top = 5
