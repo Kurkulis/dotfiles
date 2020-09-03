@@ -24,7 +24,7 @@ super + shift + {q,r}
 
 # close and kill
 super + q
-	bspc node -{c,k}
+	bspc node -{c}
 
 #
 # state/flags
