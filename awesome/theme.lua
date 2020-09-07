@@ -25,7 +25,7 @@ theme.fg_urgent     = "#ac4142"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(1)
+theme.border_width  = dpi(2)
 theme.border_normal = "#1d1f21"
 theme.border_focus  = "#f4bf75"
 theme.border_marked = "#91231c"
@@ -42,9 +42,11 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 )
 
 -- Variables set for theming notifications:
--- notification_font
--- notification_[bg|fg]
--- notification_[width|height|margin]
+notification_font = "JetBrains Mono 12"
+notification_bg = theme.fg_normal
+notification_fg = theme.bg_normal
+notification_height = dpi(75)
+notification_width = dpi(100)
 -- notification_[border_color|border_width|shape|opacity]
 
 -- Variables set for theming the menu:
@@ -86,7 +88,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "~/Pictures/wallpapers/bigsur.jpg"
+theme.wallpaper = "~/Pictures/wallpapers/gradient.png"
 
 -- Generate Awesome icon:
 theme.awesome_icon = theme_assets.awesome_icon(
@@ -96,6 +98,32 @@ theme.awesome_icon = theme_assets.awesome_icon(
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
 theme.icon_theme = nil
+
+theme.layout_fairh       = themes_path.."default/layouts/fairhw.png"
+theme.layout_fairv       = themes_path.."default/layouts/fairvw.png"
+theme.layout_floating    = themes_path.."default/layouts/floatingw.png"
+theme.layout_magnifier   = themes_path.."default/layouts/magnifierw.png"
+theme.layout_max         = themes_path.."default/layouts/maxw.png"
+theme.layout_fullscreen  = themes_path.."default/layouts/fullscreenw.png"
+theme.layout_tilebottom  = themes_path.."default/layouts/tilebottomw.png"
+theme.layout_tileleft    = themes_path.."default/layouts/tileleftw.png"
+theme.layout_tile        = themes_path.."default/layouts/tilew.png"
+theme.layout_tiletop     = themes_path.."default/layouts/tiletopw.png"
+theme.layout_spiral      = themes_path.."default/layouts/spiralw.png"
+theme.layout_dwindle     = themes_path.."default/layouts/dwindlew.png"
+theme.layout_cornernw    = themes_path.."default/layouts/cornernww.png"
+theme.layout_cornerne    = themes_path.."default/layouts/cornernew.png"
+theme.layout_cornersw    = themes_path.."default/layouts/cornersww.png"
+theme.layout_cornerse    = themes_path.."default/layouts/cornersew.png"
+
+theme.lain_icons         = os.getenv("HOME") ..
+                           "/.config/awesome/lain/icons/layout/default/"
+theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
+theme.layout_centerfair  = theme.lain_icons .. "centerfairw.png"  -- termfair.center
+theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
+theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png" -- cascade.tile
+theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
+theme.layout_centerworkh = theme.lain_icons .. "centerworkhw.png" -- centerwork.horizontal
 
 return theme
 
