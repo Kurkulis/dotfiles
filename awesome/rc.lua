@@ -55,9 +55,6 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/home/emil/.config/awesome/theme.lua")
 
--- Restrict notification popup size
-naughty.config.defaults['icon_size'] = 100
-
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
 editor = os.getenv("EDITOR") or "vim"
@@ -73,6 +70,7 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     lain.layout.centerwork,
+    lain.layout.magnifier,
     awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
@@ -84,7 +82,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.spiral.dwindle,
     -- awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
+    -- awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
@@ -136,11 +134,13 @@ mytextclock = wibox.widget.textclock()
 -- Pulseaudio widget
 volume = lain.widget.pulse {
     settings = function()
-        vlevel = "  vol " .. volume_now.left .. "%  "
         if volume_now.muted == "yes" then
             vlevel = "   Muted   "
+            widget:set_markup(lain.util.markup("#ac4142", vlevel))
+        else
+            vlevel = "  vol " .. volume_now.left .. "%  "
+            widget:set_markup(lain.util.markup("#75f5aa", vlevel))
         end
-        widget:set_markup(lain.util.markup("#75f5aa", vlevel))
     end
 }
 
@@ -149,8 +149,8 @@ local markup = lain.util.markup
 
 local myredshift = wibox.widget{
     checked      = false,
-    check_color  = "#AC4142",
-    border_color = "#AC4142",
+    check_color  = "#ac4142",
+    border_color = "#ac4142",
     border_width = 1,
     shape        = gears.shape.square,
     widget       = wibox.widget.checkbox
@@ -527,6 +527,7 @@ awful.rules.rules = {
           "veromix",
           "xtightvncviewer",
           "libreoffice",
+          "DesktopEditors",
           "calculator",
           "Nautilus",
           "Pavucontrol",
@@ -613,9 +614,9 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-    c:emit_signal("request::activate", "mouse_enter", {raise = false})
-end)
+-- client.connect_signal("mouse::enter", function(c)
+--      c:emit_signal("request::activate", "mouse_enter", {raise = false})
+-- end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
