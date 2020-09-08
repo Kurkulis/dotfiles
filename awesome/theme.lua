@@ -24,7 +24,7 @@ theme.fg_focus      = "#f4bf75"
 theme.fg_urgent     = "#ac4142"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = dpi(0)
+theme.useless_gap   = dpi(10)
 theme.border_width  = dpi(2)
 theme.border_normal = "#1d1f21"
 theme.border_focus  = "#f4bf75"
@@ -40,14 +40,6 @@ theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
     taglist_square_size, theme.fg_normal
 )
-
--- Variables set for theming notifications:
-notification_font = "JetBrains Mono 12"
-notification_bg = theme.fg_normal
-notification_fg = theme.bg_normal
-notification_height = dpi(75)
-notification_width = dpi(100)
--- notification_[border_color|border_width|shape|opacity]
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
@@ -88,7 +80,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "~/Pictures/wallpapers/gradient.png"
+theme.wallpaper = "~/Pictures/wallpapers/anime-girl-lonely-night.jpg"
 
 -- Generate Awesome icon:
 theme.awesome_icon = theme_assets.awesome_icon(
