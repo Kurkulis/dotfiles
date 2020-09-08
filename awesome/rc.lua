@@ -55,6 +55,9 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/home/emil/.config/awesome/theme.lua")
 
+-- Restrict notifications size
+naughty.config.defaults['icon_size'] = 80
+
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
 editor = os.getenv("EDITOR") or "vim"
