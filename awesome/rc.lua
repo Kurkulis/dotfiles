@@ -58,6 +58,9 @@ beautiful.init("/home/emil/.config/awesome/theme.lua")
 -- Restrict notifications size
 naughty.config.defaults['icon_size'] = 80
 
+-- Autostart applications
+awful.spawn.with_shell('xautolock -time 60 -locker "i3lock -c 000000"')
+
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
 editor = os.getenv("EDITOR") or "vim"
