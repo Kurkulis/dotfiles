@@ -9,21 +9,21 @@ local theme = {}
 
 theme.font          = "JetBrains Mono 10"
 
-theme.bg_normal     = "#1d1f21"
-theme.bg_focus      = "#1d1f21"
+theme.bg_normal     = "#111112"
+theme.bg_focus      = "#111112"
 theme.bg_urgent     = "#ac4142"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#ebdbb2"
-theme.fg_focus      = "#f4bf75"
+theme.fg_focus      = "#fbac3b"
 theme.fg_urgent     = "#ac4142"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(10)
 theme.border_width  = dpi(2)
-theme.border_normal = "#1d1f21"
-theme.border_focus  = "#f4bf75"
+theme.border_normal = "#111112"
+theme.border_focus  = "#fbac3b"
 theme.border_marked = "#91231c"
 
 theme.taglist_bg_focus = "#444444"
