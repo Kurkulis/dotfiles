@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <style>
+	    *{
+		margin:0;
+		padding:0;
+		background-color: var(--bg-dark);
+	    }
+
+	    :root {
+		--bg-dark: #111112;
+		--bg-dark2: #333537;
+		--fg-dark: #ebdbb2;
+		--green: #90A959;
+		--blue: #6A9FB5;
+		--red: #AC4142;
+		--yellow: #F4BF75;
+		--link-hover-timing: all 0.25s ease-in-out;
+		--fonts: 'JetBrains Mono', Helvetica, sans-serif;
+	    }
+	   a, a:visited {
+		color: var(--fg-dark);
+	   }
+
+    	   body {
+		 font-family: var(--fonts);
+		 background-color: var(--bg-dark);
+	         color: var(--fg-dark);
+	   }
+
+	    #box {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	    }
+
+	    .container {
+		padding: 1em;
+		margin: 3%;
+		height: 6.3em;
+		width: 9em;
+	    }
+
+	    a, a:visited {
+		text-decoration: none;
+		display: block;
+	    }
+
+	    header {
+		padding-bottom: 8px;
+		font-weight:bold;
+		cursor: pointer;
+	    }
+
+	    .daily a:hover, .daily header {
+		color: var(--green);
+	    }
+
+	    .media a:hover, .media header {
+		color: var(--yellow);
+	    }
+
+	    .reddit a:hover, .reddit header {
+		color: var(--red);
+	    }
+
+	    @media (max-width:620px) {
+		.container {
+		    padding: 2em;
+		    margin: 0;
+		}
+	    }
+    	</style>
+    </head>
+    <body class="dark">
+        <div id="box">
+            <div class="container">
+                <div class="daily">
+                    <header>DAILY</header>
+                    <a href="https://www.github.com/kurkulis">Github</a>
+                    <a href="https://www.office.com/?auth=2">Office</a>
+                    <a href="https://messi.turkuamk.fi/">Messi</a>
+                    <a href="https://vw4.viope.com/login?path=/welcome">Viope</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="media">
+                    <header>OTHER</header>
+                    <a href="https://www.youtube.com/">Youtube</a>
+                    <a href="https://www.twitch.tv/">Twitch</a>
+                    <a href="https://twitter.com/">Twitter</a>
+                    <a href="https://medium.com/">Medium</a>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="reddit">
+                    <header>REDDIT</header>
+                    <a href="https://www.reddit.com/r/datascience/">r/datascience</a>
+                    <a href="https://www.reddit.com/r/MachineLearning/">r/machinelearning</a>
+                    <a href="https://www.reddit.com/r/battlestations/">r/battlestations</a>
+                    <a href="https://www.reddit.com/r/unixporn">r/unixporn</a>
+                </div>
+            </div>
+        </div>
+    </body>    
+</html>
