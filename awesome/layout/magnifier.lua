@@ -81,8 +81,8 @@ function magnifier.arrange(p)
 
     local geometry = {}
     if #cls > 1 then
-        geometry.width = area.width * math.sqrt(mwfact) * 0.9
-        geometry.height = area.height * math.sqrt(mwfact) * 1.3
+        geometry.width = area.width * math.sqrt(mwfact) * 0.85
+        geometry.height = area.height * math.sqrt(mwfact) * 1.35
         geometry.x = area.x + (area.width - geometry.width) / 2
         geometry.y = area.y + (area.height - geometry.height) /2
     else
