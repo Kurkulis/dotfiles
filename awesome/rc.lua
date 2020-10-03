@@ -211,7 +211,7 @@ local function set_wallpaper(s)
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
         end
-        --- gears.wallpaper.maximized(wallpaper, s, true)
+        giears.wallpaper.maximized(wallpaper, s, true)
         gears.wallpaper.set("#1d1f21")
     end
 end
@@ -221,8 +221,9 @@ screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
-    set_wallpaper(s)
-
+    -- set_wallpaper(s)
+    gears.wallpaper.set("#1d1f21")
+    
     -- Each screen has its own tag table.
     awful.tag({ " MAIN", " CHAT", " CODE", " MEET", " READ", " XTRA"}, s, awful.layout.layouts[1])
 
