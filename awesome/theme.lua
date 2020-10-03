@@ -7,7 +7,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "JetBrains Mono 10"
+theme.font          = "JetBrains Mono Bold 10"
 
 theme.bg_normal     = "#111112"
 theme.bg_focus      = "#111112"
@@ -20,33 +20,29 @@ theme.fg_focus      = "#bf832c"
 theme.fg_urgent     = "#ac4142"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = dpi(10)
-theme.border_width  = dpi(2)
+theme.useless_gap   = 10
+theme.border_width  = 2
 theme.border_normal = "#111112"
 theme.border_focus  = "#bf832c"
 theme.border_marked = "#91231c"
 
-
--- Generate taglist squares:
-local taglist_square_size = dpi(4)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    taglist_square_size, theme.fg_normal
-)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.fg_normal
-)
+theme.taglist_bg_focus = "transparent"
+theme.taglist_fg_empty = "#444444"
+theme.taglist_bg_urgent = "transparent"
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(20)
-theme.menu_width  = dpi(150)
+theme.menu_width  = dpi(250)
 
--- You can add as many variables as
--- you wish and access them by using
--- beautiful.variable in your rc.lua
---theme.bg_widget = "#cc0000"
+theme.notification_border_width     = theme.border
+theme.notification_icon_size        = 80
+theme.notification_opacity          = 1
+theme.notification_max_width        = 600
+theme.notification_max_height       = 400
+theme.notification_margin           = 20
 
 -- Define the image to load
 theme.titlebar_close_button_normal = themes_path.."default/titlebar/close_normal.png"
