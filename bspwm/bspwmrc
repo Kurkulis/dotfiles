@@ -4,7 +4,7 @@ sxhkd &
 tint2 
 xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $(xdo id -n tint2)
 # $HOME/.config/polybar/launch.sh &
-feh --bg-tile ~/Pictures/wallpapers/cross.png &
+feh --bg-fill ~/Pictures/wallpapers/anime-girl-lonely-night.jpg &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
