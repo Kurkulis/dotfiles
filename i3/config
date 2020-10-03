@@ -21,7 +21,7 @@ bindsym $mod+Control+l exec i3lock -c 000000
 exec --no-startup-id redshift
 
 # Set desktop background with feh
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/111112.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/anime-girl-lonely-night.jpg
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -40,7 +40,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # toggle rofi
-bindsym $mod+space exec rofi -show run
+bindsym $mod+space exec rofi -show drun
 
 # Move focus
 bindsym $mod+Control+Left focus left
@@ -150,8 +150,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Gaps
-for_window [class=".*"] border pixel 1
-#gaps inner 20
+for_window [class=".*"] border pixel 2
+gaps top 20
+gaps inner 20
+smart_borders on
 
 # Focus follows mouse
 focus_follows_mouse no
@@ -179,9 +181,9 @@ focus_follows_mouse no
 #}
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #f4bf75 #f4bf75 #1d1f21 #2e9ef4   #f4bf75
-client.focused_inactive #1d1f21 #1d1f21 #ebdbb2 #292d2e   #1d1f21
-client.unfocused        #1d1f21 #1d1f21 #ebdbb2 #292d2e   #1d1f21
+client.focused          #bf832c #bf832c #1d1f21 #2e9ef4   #bf832c
+client.focused_inactive #111112 #111112 #ebdbb2 #292d2e   #111112
+client.unfocused        #111112 #111112 #ebdbb2 #292d2e   #111112
 client.urgent           #ac4142 #ac4142 #1d1f21 #900000   #ac4142
 client.placeholder      #000000 #0c0c0c #1d1f21 #000000   #0c0c0c
 
