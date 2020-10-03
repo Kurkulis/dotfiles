@@ -1,15 +1,15 @@
 [colors]
-background = #1d1f21
+background = #111112
 background-alt = #444
 foreground = #ebdbb2
 foreground-alt = #555
 primary = #f4bf75
-secondary = #e60053
+secondary = #75f5aa
 alert = #ac4142
 
 [bar/example]
 width = 100%
-height = 30
+height = 25
 fixed-center = true
 override-redirect = true
 
@@ -23,7 +23,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 padding-right = 2
-padding-left = 2
+padding-left = 0
 
 font-0 = "JetBrains Mono:pixelsize=10;2"
 
@@ -46,18 +46,18 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 [module/i3]
 type = internal/i3
@@ -65,7 +65,7 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.alert}
 
@@ -74,23 +74,23 @@ label-focused = %index%
 label-focused-foreground = ${colors.primary}
 label-focused-background = ${colors.background}
 label-focused-underline = ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-foreground = ${self.label-focused-foreground}
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = 2
+label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-foreground = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 [module/cpu]
 type = internal/cpu
@@ -117,7 +117,7 @@ type = internal/pulseaudio
 
 format-volume = <label-volume>
 label-volume = vol %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${colors.secondary}
 
 label-muted = muted (%percentage%%)
 label-muted-foreground = ${colors.alert}
