@@ -37,7 +37,8 @@ theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(20)
 theme.menu_width  = dpi(250)
 
-theme.notification_border_width     = theme.border
+theme.notification_border_width     = theme.border_width
+theme.notification_border_color     = theme.border_focus
 theme.notification_icon_size        = 80
 theme.notification_opacity          = 1
 theme.notification_max_width        = 600
