@@ -21,7 +21,7 @@ theme.fg_urgent     = "#ac4142"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = 10
-theme.border_width  = 2
+theme.border_width  = 0
 theme.border_normal = "#111112"
 theme.border_focus  = "#bf832c"
 theme.border_marked = "#91231c"
@@ -100,8 +100,7 @@ theme.layout_cornerne    = themes_path.."default/layouts/cornernew.png"
 theme.layout_cornersw    = themes_path.."default/layouts/cornersww.png"
 theme.layout_cornerse    = themes_path.."default/layouts/cornersew.png"
 
-theme.lain_icons         = os.getenv("HOME") ..
-                           "/.config/awesome/lain/icons/layout/default/"
+theme.lain_icons         = "/usr/share/lua/5.3/lain/icons/layout/default/"
 theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
 theme.layout_centerfair  = theme.lain_icons .. "centerfairw.png"  -- termfair.center
 theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
