@@ -20,7 +20,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 -- Load Debian menu entries
-local debian = require("debian.menu")
+--local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 -- Load lain
@@ -118,7 +118,7 @@ else
     mymainmenu = awful.menu({
         items = {
                   menu_awesome,
-                  { "Debian", debian.menu.Debian_menu.Debian },
+                  --{ "Debian", debian.menu.Debian_menu.Debian },
                   menu_terminal,
                 }
     })
@@ -532,6 +532,8 @@ awful.rules.rules = {
           "Pavucontrol",
           "Gnome-system-monitor",
           "Gedit",
+          "File Manager PCManFM",
+          "Pcmanfm",
         },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
