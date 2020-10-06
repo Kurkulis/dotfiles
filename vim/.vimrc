@@ -148,13 +148,12 @@ let g:netrw_browse_split=4
 let g:netrw_altv=1
 let g:netrw_winsize=20
 
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
+"augroup ProjectDrawer
+"  autocmd!
+"  autocmd VimEnter * :Vexplore
+"augroup END
 
 highlight FoldColumn ctermbg=0
-highlight LineNr ctermfg=grey
 
 " Configuration for vim-markdown
 let g:vim_markdown_folding_disabled = 1
