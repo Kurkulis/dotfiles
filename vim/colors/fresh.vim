@@ -42,7 +42,7 @@ let colors_name = "fresh"
 :hi Type ctermfg=2
 :hi Function ctermfg=brown
 :hi Structure ctermfg=green
-:hi LineNr ctermfg=3
+:hi LineNr ctermfg=8
 :hi Ignore cterm=bold ctermfg=7
 :hi Directory ctermfg=darkcyan
 :hi ErrorMsg cterm=bold cterm=bold ctermfg=7 ctermbg=1
