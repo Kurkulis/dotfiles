@@ -532,8 +532,8 @@ awful.rules.rules = {
           "Pavucontrol",
           "Gnome-system-monitor",
           "Gedit",
-          "File Manager PCManFM",
           "Pcmanfm",
+          "Gscreenshot",
         },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
