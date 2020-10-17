@@ -12,14 +12,14 @@ endif
 let colors_name = "fresh"
 
 :hi VertSplit gui=none cterm=reverse
-:hi Folded ctermfg=grey ctermbg=darkgrey
+:hi Folded ctermfg=8 ctermbg=darkgrey
 :hi FoldColumn ctermfg=4 ctermbg=7
 :hi IncSearch cterm=none ctermfg=yellow ctermbg=green
 :hi ModeMsg cterm=none ctermfg=brown
 :hi MoreMsg ctermfg=darkgreen
 :hi NonText cterm=bold ctermfg=blue
 :hi Question ctermfg=green
-:hi Search cterm=none ctermfg=grey ctermbg=blue
+:hi Search cterm=none ctermfg=8 ctermbg=blue
 :hi SpecialKey ctermfg=darkgreen
 :hi StatusLine gui=none cterm=bold,reverse
 :hi StatusLineNC gui=none cterm=reverse
@@ -28,7 +28,7 @@ let colors_name = "fresh"
 :hi Visual cterm=reverse
 :hi WarningMsg ctermfg=1
 :hi String ctermfg=green
-:hi Comment ctermfg=grey
+:hi Comment ctermfg=8
 :hi Constant ctermfg=green
 :hi Special ctermfg=red
 :hi markdownLinkDelimiter ctermfg=red
