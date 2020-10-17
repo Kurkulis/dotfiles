@@ -11,23 +11,23 @@ theme.font          = "Roboto 11"
 
 theme.bg_normal     = "#111112"
 theme.bg_focus      = "#111112"
-theme.bg_urgent     = "#ac4142"
-theme.bg_minimize   = "#444444"
+theme.bg_urgent     = "#CC241D"
+theme.bg_minimize   = "#3C3836"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#ebdbb2"
-theme.fg_focus      = "#bf832c"
-theme.fg_urgent     = "#ac4142"
+theme.fg_normal     = "#A89984"
+theme.fg_focus      = "#D79921"
+theme.fg_urgent     = "#CC241D"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = 10
 theme.border_width  = 0
 theme.border_normal = "#111112"
-theme.border_focus  = "#bf832c"
+theme.border_focus  = "#D79921"
 theme.border_marked = "#91231c"
 
 theme.taglist_bg_focus = "transparent"
-theme.taglist_fg_empty = "#444444"
+theme.taglist_fg_empty = "#3C3836"
 theme.taglist_bg_urgent = "transparent"
 
 -- Variables set for theming the menu:
