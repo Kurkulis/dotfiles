@@ -155,8 +155,8 @@ local markup = lain.util.markup
 
 local myredshift = wibox.widget{
     checked      = false,
-    check_color  = "#ac4142",
-    border_color = "#ac4142",
+    check_color  = "#CC241D",
+    border_color = "#CC241D",
     border_width = 1,
     shape        = gears.shape.square,
     widget       = wibox.widget.checkbox
