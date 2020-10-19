@@ -11,28 +11,26 @@ theme.font          = "Roboto 11"
 
 theme.bg_normal     = "#111112"
 theme.bg_focus      = "#111112"
-theme.bg_urgent     = "#CC241D"
+theme.bg_urgent     = "#A61D17"
 theme.bg_minimize   = "#3C3836"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#A89984"
-theme.fg_focus      = "#D79921"
-theme.fg_urgent     = "#CC241D"
+theme.fg_focus      = "#B5811B"
+theme.fg_urgent     = "#A61D17"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = 10
 theme.border_width  = 0
 theme.border_normal = "#111112"
-theme.border_focus  = "#D79921"
+theme.border_focus  = "#B5811B"
 theme.border_marked = "#91231c"
 
 theme.taglist_bg_focus = "transparent"
 theme.taglist_fg_empty = "#3C3836"
 theme.taglist_bg_urgent = "transparent"
 
--- Variables set for theming the menu:
--- menu_[bg|fg]_[normal|focus]
--- menu_[border_color|border_width]
+
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(20)
 theme.menu_width  = dpi(250)
@@ -79,8 +77,6 @@ theme.awesome_icon = theme_assets.awesome_icon(
     theme.menu_height, theme.bg_focus, theme.fg_focus
 )
 
--- Define the icon theme for application icons. If not set then the icons
--- from /usr/share/icons and /usr/share/icons/hicolor will be used.
 theme.icon_theme = nil
 
 theme.layout_fairh       = themes_path.."default/layouts/fairhw.png"
