@@ -11,19 +11,19 @@ theme.font          = "Roboto 11"
 
 theme.bg_normal     = "#111112"
 theme.bg_focus      = "#111112"
-theme.bg_urgent     = "#A61D17"
+theme.bg_urgent     = "#AC4142"
 theme.bg_minimize   = "#3C3836"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#A89984"
-theme.fg_focus      = "#B5811B"
-theme.fg_urgent     = "#A61D17"
+theme.fg_focus      = "#ac7e41"
+theme.fg_urgent     = "#AC4142"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = 10
 theme.border_width  = 0
 theme.border_normal = "#111112"
-theme.border_focus  = "#B5811B"
+theme.border_focus  = "#ac7e41"
 theme.border_marked = "#91231c"
 
 theme.taglist_bg_focus = "transparent"
