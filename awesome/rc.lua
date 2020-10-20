@@ -142,10 +142,10 @@ volume = lain.widget.pulse {
     settings = function()
         if volume_now.muted == "yes" then
             vlevel = "   Muted   "
-            widget:set_markup(lain.util.markup("#A61D17", vlevel))
+            widget:set_markup(lain.util.markup("#AC4142", vlevel))
         else
             vlevel = "  vol " .. volume_now.left .. "%  "
-            widget:set_markup(lain.util.markup("#689D6A", vlevel))
+            widget:set_markup(lain.util.markup("#41ac6a", vlevel))
         end
     end
 }
@@ -155,8 +155,8 @@ local markup = lain.util.markup
 
 local myredshift = wibox.widget{
     checked      = false,
-    check_color  = "#A61D17",
-    border_color = "#A61D17",
+    check_color  = "#AC4142",
+    border_color = "#AC4142",
     border_width = 1,
     shape        = gears.shape.square,
     widget       = wibox.widget.checkbox
