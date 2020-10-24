@@ -10,6 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -77,6 +78,7 @@ set foldcolumn=1
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd filetype markdown setlocal nonumber
 autocmd filetype markdown setlocal conceallevel=2
+autocmd FileType markdown let b:coc_suggest_disable = 1
 
 set nobackup
 set nowb
