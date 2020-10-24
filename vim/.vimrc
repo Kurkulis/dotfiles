@@ -84,7 +84,6 @@ set nobackup
 set nowb
 set noswapfile
 
-set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
@@ -106,8 +105,8 @@ hi VertSplit ctermfg=0 ctermbg=0
 set fillchars=vert:\│
 
 " Formats the statusline
-hi User2 ctermbg=0 ctermfg=2 cterm=bold
-hi User1 ctermbg=2 ctermfg=0
+hi User2 ctermbg=0 ctermfg=7
+hi User1 ctermbg=0 ctermfg=2
 hi statusline ctermfg=0 ctermbg=2
 hi statuslineNC ctermfg=0 ctermbg=0
 set laststatus=2
