@@ -12,7 +12,7 @@ font pango: JetBrains Mono 10
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Lock the screen after inactivity
-exec_always --no-startup-id xautolock -time 60 -locker "i3lock -c 000000"
+# exec_always --no-startup-id xautolock -time 60 -locker "i3lock -c 000000"
 
 # Lock the screen immediately
 bindsym $mod+Control+l exec i3lock -c 000000
@@ -21,7 +21,7 @@ bindsym $mod+Control+l exec i3lock -c 000000
 exec --no-startup-id redshift
 
 # Set desktop background with feh
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/anime-girl-lonely-night.jpg
+exec --no-startup-id hsetroot -solid '#000000'
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -150,7 +150,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Gaps
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 gaps top 20
 gaps inner 20
 smart_borders on
@@ -163,19 +163,19 @@ focus_follows_mouse no
 #bar {
 #        status_command i3status
 #        position top
-#        height 30
+#        height 25
 #        tray_padding 5
 #        separator_symbol " "
 
 #        colors {
 #        background #111112
-#        statusline #ebdbb2
+#        statusline #A89984
 #        separator #1d1f21
 
         #class             border  backgr. text
-#        focused_workspace  #ebdbb2 #ebdbb2 #1d1f21
+#        focused_workspace  #111112 #111112 #AC7E41
 #        active_workspace   #333333 #5f676a #ffffff
-#        inactive_workspace #111112 #111112 #ebdbb2
+#        inactive_workspace #111112 #111112 #A89984
 #        urgent_workspace   #ac4142 #ac4142 #1d1f21
 #    }
 #}
@@ -187,10 +187,12 @@ client.unfocused        #111112 #111112 #ebdbb2 #292d2e   #111112
 client.urgent           #ac4142 #ac4142 #1d1f21 #900000   #ac4142
 client.placeholder      #000000 #0c0c0c #1d1f21 #000000   #0c0c0c
 
-client.background       #ffffff
+client.background       #1d1f21
 
 # Always float these apps
-for_window [class="Nautilus"] floating enable
+for_window [class="Pavucontrol"] floating enable
 for_window [window_role="pop-up"] floating enable
-for_window [class="calculator"] floating enable
-for_window [class="libreoffice"] floating enable
+for_window [class="Pcmanfm"] floating enable
+for_window [class="Gscreenshot"] floating enable
+for_window [class="Pulseeffects"] floating enable
+for_window [class="Blueman-manager"] floating enable
