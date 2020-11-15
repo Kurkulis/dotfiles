@@ -50,4 +50,5 @@ fi
 
 xrdb -merge ~/.Xresources 
 picom &
-exec awesome
+pulseeffects --gapplication-service &
+exec i3
