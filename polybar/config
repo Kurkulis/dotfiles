@@ -1,15 +1,16 @@
 [colors]
 background = #111112
 background-alt = #444
-foreground = #ebdbb2
+foreground = #A89984
 foreground-alt = #555
-primary = #bf832c
-secondary = #75f5aa
+primary = #AC7E41
+secondary = #41AC6A
 alert = #ac4142
+green = #93AC41
 
-[bar/example]
+[bar/mybar]
 width = 100%
-height = 25
+height = 20
 fixed-center = true
 override-redirect = true
 
@@ -25,11 +26,11 @@ module-margin-right = 1
 padding-right = 2
 padding-left = 0
 
-font-0 = "JetBrains Mono:pixelsize=10;2"
+font-0 = "JetBrains Mono:pixelsize=10;5"
 
 modules-left = i3 bspwm
 modules-center = date
-modules-right = pulseaudio cpu memory
+modules-right = pulseaudio cpu memory redshift
 
 tray-position = none
 tray-padding = 5
@@ -73,7 +74,6 @@ label-mode-background = ${colors.alert}
 label-focused = %index%
 label-focused-foreground = ${colors.primary}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.primary}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -84,7 +84,6 @@ label-unfocused-padding = 1
 label-visible = %index%
 label-visible-foreground = ${self.label-focused-foreground}
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
@@ -96,11 +95,13 @@ label-urgent-padding = 1
 type = internal/cpu
 interval = 2
 label = cpu %percentage:2%%
+format-foreground = ${colors.primary}
 
 [module/memory]
 type = internal/memory
 interval = 2
 label = mem %percentage_used%%
+format-foreground = ${colors.green}
 
 [module/date]
 type = internal/date
@@ -128,5 +129,14 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
+[module/redshift]
+type = custom/script
+interval = 2.0
+click-left = pgrep redshift &> /dev/null || redshift &> /dev/null &
+click-right = pkill redshift
+format-foreground = ${colors.alert}
+
+exec = ~/.config/polybar/redshift.sh
 
 ; vim:ft=dosini
