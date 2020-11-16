@@ -1,11 +1,11 @@
 [colors]
-background = #111112
+background = #1d1f21
 background-alt = #444
 foreground = #A89984
 foreground-alt = #555
-primary = #AC7E41
-secondary = #41AC6A
-alert = #ac4142
+yellow = #AC7E41
+cyan = #41AC6A
+red = #ac4142
 green = #93AC41
 
 [bar/mybar]
@@ -26,16 +26,13 @@ module-margin-right = 1
 padding-right = 2
 padding-left = 0
 
-font-0 = "JetBrains Mono:pixelsize=10;5"
+font-0 = "JetBrains Mono:pixelsize=10;2.5"
 
 modules-left = i3 bspwm
 modules-center = date
 modules-right = pulseaudio cpu memory redshift
 
-tray-position = none
-tray-padding = 5
-
-wm-restack = bspwm
+wm-restack = i3
 
 [module/xwindow]
 type = internal/xwindow
@@ -46,14 +43,14 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.yellow}
 label-focused-padding = 1
 
 label-occupied = %index%
 label-occupied-padding = 1
 
 label-urgent = %index%!
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 1
 
 label-empty = %index%
@@ -68,11 +65,11 @@ wrapping-scroll = false
 
 label-mode-padding = 1
 label-mode-foreground = #000
-label-mode-background = ${colors.alert}
+label-mode-background = ${colors.red}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-foreground = ${colors.primary}
+label-focused-foreground = ${colors.yellow}
 label-focused-background = ${colors.background}
 label-focused-padding = 1
 
@@ -88,14 +85,14 @@ label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-foreground = ${colors.alert}
+label-urgent-foreground = ${colors.red}
 label-urgent-padding = 1
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 label = cpu %percentage:2%%
-format-foreground = ${colors.primary}
+format-foreground = ${colors.yellow}
 
 [module/memory]
 type = internal/memory
@@ -118,10 +115,20 @@ type = internal/pulseaudio
 
 format-volume = <label-volume>
 label-volume = vol %percentage%%
-label-volume-foreground = ${colors.secondary}
+label-volume-foreground = ${colors.cyan}
 
 label-muted = muted (%percentage%%)
-label-muted-foreground = ${colors.alert}
+label-muted-foreground = ${colors.red}
+
+[module/redshift]
+type = custom/script
+interval = 2.0
+click-left = pgrep redshift &> /dev/null || redshift &> /dev/null &
+click-right = pkill redshift
+format-foreground = ${colors.red}
+
+exec = ~/.config/polybar/redshift.sh
+
 
 [settings]
 screenchange-reload = true
@@ -129,14 +136,5 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-[module/redshift]
-type = custom/script
-interval = 2.0
-click-left = pgrep redshift &> /dev/null || redshift &> /dev/null &
-click-right = pkill redshift
-format-foreground = ${colors.alert}
-
-exec = ~/.config/polybar/redshift.sh
 
 ; vim:ft=dosini
