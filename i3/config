@@ -36,6 +36,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec kitty
 
+# Start applications
+bindsym $mod+z exec firefox
+bindsym $mod+x exec pcmanfm
+
 # kill focused window
 bindsym $mod+q kill
 
@@ -151,7 +155,7 @@ bindsym $mod+r mode "resize"
 
 # Gaps
 for_window [class=".*"] border pixel 0
-gaps top 20
+gaps top 0
 gaps inner 20
 smart_borders on
 
