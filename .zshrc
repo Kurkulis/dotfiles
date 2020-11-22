@@ -15,7 +15,7 @@ plugins=(
 source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
 
-alias note="sh ~/.scripts/note.sh"
+alias note="cd ~/notes && sh ~/.scripts/note.sh"
 alias daily="sh ~/.scripts/daily/daily.sh"
 alias weekly="sh ~/.scripts/weekly/weekly.sh"
 alias ls="exa -al"
