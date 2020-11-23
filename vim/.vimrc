@@ -138,6 +138,7 @@ hi VertSplit ctermfg=0 ctermbg=8
 set fillchars=vert:\│
 
 " Statusline colors
+hi User3 ctermbg=0 ctermfg=1
 hi User2 ctermbg=0 ctermfg=3
 hi User1 ctermbg=0 ctermfg=2
 hi statusline ctermfg=0 ctermbg=2
@@ -147,23 +148,29 @@ hi statuslineNC ctermfg=0 ctermbg=0
 set laststatus=2
 
 " Normal statusline
-set statusline=%1*                 " change colors
+set statusline=%1*                  " change colors
 set statusline+=[%{GetMode()}]      " show mode
 set statusline+=%2*                 " change colors
-set statusline+=\ %t%m              " file name & modified flag
+set statusline+=\ %t                " file name
+set statusline+=%3*                 " change colors
+set statusline+=%m                  " modified flag
+set statusline+=%2*                 " change colors
 set statusline+=%=                  " split alignment to right from here
 set statusline+=%l/%L               " line X of Y
 set statusline+=\ %y                " show filetype
 
 " statusline for markdown files
 function StatuslineMD()
-    set statusline=%1*                 " change colors
-    set statusline+=[%{GetMode()}]      " show mode
-    set statusline+=%2*                 " change colors
-    set statusline+=\ %t%m              " file name & modified flag
-    set statusline+=%=                  " split alignment to right from here
-    set statusline+=line\ %l\ of\ %L               " line X of Y
-    set statusline+=\ (%{WordCount()}\ words) " Get word count
+    set statusline=%1*              " change colors
+    set statusline+=[%{GetMode()}]  " show mode
+    set statusline+=%2*             " change colors
+    set statusline+=\ %t            " file name
+    set statusline+=%3*             " change colors
+    set statusline+=%m              " modified flag
+    set statusline+=%2*             " change colors
+    set statusline+=%=              " split alignment to right from here
+    set statusline+=line\ %l\ of\ %L    " line X of Y
+    set statusline+=\ (%{WordCount()}\ words)   " Get word count
 endfunction
 
 " Get current mode
