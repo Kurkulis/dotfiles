@@ -39,6 +39,7 @@ bindsym $mod+Return exec kitty
 # Start applications
 bindsym $mod+z exec firefox
 bindsym $mod+x exec pcmanfm
+bindsym $mod+c exec code-insiders
 
 # kill focused window
 bindsym $mod+q kill
