@@ -1,6 +1,7 @@
 /* 
 Modified from this: https://github.com/MiguelRAvila/SimplerentFox
 */
+
 :root {
 	--srf-color-primary: rgb(17, 17, 18);
 	--srf-color-selection: #ac7e41;
@@ -116,6 +117,10 @@ Here you can comment if you want your buttons to be showed up!
 /* This one is the back button  */
 #back-button {
 	display: none !important;
+}
+
+#nav-bar-overflow-button {
+	fill: #3C3836 !important
 }
 
 /* This one is the spacer between tabs and border  */
