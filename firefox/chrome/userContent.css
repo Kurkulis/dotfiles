@@ -1,9 +1,9 @@
 :root {
-	scrollbar-width: none !important;
+	scrollbar-width: thin !important; /* change to "none" to hide */
 }
 
 @-moz-document url(about:privatebrowsing) {
 	:root {
-		scrollbar-width: none !important;
+		scrollbar-width: thin !important; /* change to "none" to hide */
 	}
 }
