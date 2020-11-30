@@ -21,7 +21,7 @@ bindsym $mod+Control+l exec i3lock -c 000000
 exec --no-startup-id redshift
 
 # Set desktop background with feh
-exec --no-startup-id hsetroot -solid '#2e3440'
+exec --no-startup-id hsetroot -solid '#282828'
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
