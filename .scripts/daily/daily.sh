@@ -1,16 +1,16 @@
 #!/bin/sh
 
-# current date as filename
-filename=$(date "+%d_%m_%Y").md
+# current week as filename
+filename=week_$(date "+%V").md
 
-# current month_year
-month=$(date "+%m_%Y")
+# current year
+year=$(date "+%Y")
 
 # whole path to file
-file=~/notes/personal/daily/$month/$filename
+file=~/notes/journal/$year/$filename
 
 if [ -f "$file" ]; then
     vim $file;
 else
-    cp -n ~/.scripts/daily/daily_template.md $file; vim $file;
+    cp -n ~/.scripts/journal/journal_template.md $file; vim $file;
 fi
