@@ -15,7 +15,7 @@ plugins=(
 source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
 
-alias journal="cd ~/notes && sh ~/.scripts/daily/daily.sh"
+alias journal="cd ~/notes && sh ~/.scripts/journal/journal.sh"
 alias weekly="sh ~/.scripts/weekly/weekly.sh"
 alias ls="exa -al"
 alias duck="sh ~/.scripts/duck.sh"
