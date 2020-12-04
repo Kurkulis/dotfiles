@@ -7,7 +7,7 @@ filename=week_$(date -d "last week" "+%V").md
 year=$(date "+%Y")
 
 # whole path
-path=~/notes/personal/weekly/$year/$filename
+path=~/notes/reflections/weekly/$year/$filename
 
 # file extension
 extension="${filename##*.}"
