@@ -1,10 +1,19 @@
-## Positiiviset
-
-* 
-
-## Normijutut
+## Maanantai
 
 
+## Tiistai
 
-## Lukemiset
 
+## Keskiviikko
+
+
+## Torstai
+
+
+## Perjantai
+
+
+## Lauantai
+
+
+## Sunnuntai
