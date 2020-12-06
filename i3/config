@@ -4,9 +4,6 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango: JetBrains Mono 10
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
 
 # Launch Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -20,8 +17,8 @@ bindsym $mod+Control+l exec i3lock -c 000000
 # Start redshift on startup
 exec --no-startup-id redshift
 
-# Set desktop background with feh
-exec --no-startup-id hsetroot -solid '#282828'
+# Set desktop background with hsetroot
+exec --no-startup-id hsetroot -solid '#181a21'
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -155,44 +152,23 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Gaps
-for_window [class=".*"] border pixel 0
-gaps top 0
-gaps inner 20
+for_window [class=".*"] border pixel 2
+gaps outer 0
+gaps top 20
+gaps inner 0
 smart_borders on
 
 # Focus follows mouse
 focus_follows_mouse no
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#        position top
-#        height 25
-#        tray_padding 5
-#        separator_symbol " "
-
-#        colors {
-#        background #111112
-#        statusline #A89984
-#        separator #1d1f21
-
-        #class             border  backgr. text
-#        focused_workspace  #111112 #111112 #AC7E41
-#        active_workspace   #333333 #5f676a #ffffff
-#        inactive_workspace #111112 #111112 #A89984
-#        urgent_workspace   #ac4142 #ac4142 #1d1f21
-#    }
-#}
-
 # class                 border  backgr. text    indicator child_border
-client.focused          #bf832c #bf832c #1d1f21 #2e9ef4   #bf832c
-client.focused_inactive #111112 #111112 #ebdbb2 #292d2e   #111112
-client.unfocused        #111112 #111112 #ebdbb2 #292d2e   #111112
+client.focused          #ac7e41 #ac7e41 #1d1f21 #ac7e41   #ac7e41
+client.focused_inactive #181a21 #181a21 #ebdbb2 #181a21   #181a21
+client.unfocused        #181a21 #181a21 #ebdbb2 #181a21   #181a21
 client.urgent           #ac4142 #ac4142 #1d1f21 #900000   #ac4142
-client.placeholder      #000000 #0c0c0c #1d1f21 #000000   #0c0c0c
+client.placeholder      #181a21 #181a21 #1d1f21 #181a21   #181a21
 
-client.background       #1d1f21
+client.background       #181a21
 
 # Always float these apps
 for_window [class="Pavucontrol"] floating enable
