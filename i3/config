@@ -18,7 +18,7 @@ bindsym $mod+Control+l exec i3lock -c 000000
 exec --no-startup-id redshift
 
 # Set desktop background with hsetroot
-exec --no-startup-id hsetroot -solid '#181a21'
+exec --no-startup-id hsetroot -solid '#181A21'
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -154,19 +154,22 @@ bindsym $mod+r mode "resize"
 # Gaps
 for_window [class=".*"] border pixel 2
 gaps outer 0
-gaps top 20
+gaps top 0
 gaps inner 0
 smart_borders on
+
+bindsym $mod+i gaps top current toggle 20
+bindsym $mod+j gaps inner all toggle 20
 
 # Focus follows mouse
 focus_follows_mouse no
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #ac7e41 #ac7e41 #1d1f21 #ac7e41   #ac7e41
-client.focused_inactive #181a21 #181a21 #ebdbb2 #181a21   #181a21
-client.unfocused        #181a21 #181a21 #ebdbb2 #181a21   #181a21
+client.focused_inactive #282828 #282828 #ebdbb2 #282828   #282828
+client.unfocused        #282828 #282828 #ebdbb2 #282828   #282828
 client.urgent           #ac4142 #ac4142 #1d1f21 #900000   #ac4142
-client.placeholder      #181a21 #181a21 #1d1f21 #181a21   #181a21
+client.placeholder      #282828 #282828 #1d1f21 #282828   #282828
 
 client.background       #181a21
 
@@ -178,3 +181,4 @@ for_window [class="Gscreenshot"] floating enable
 for_window [class="Pulseeffects"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Tor Browser"] floating enable
+for_window [class="Galculator"] floating enable
