@@ -1,5 +1,5 @@
 [colors]
-background = #181a21
+background = #181A21
 background-alt = #444
 foreground = #A89984
 foreground-alt = #555
@@ -62,32 +62,33 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-strip-wsnumbers = true
 enable-scroll = false
+enable-click = false
 
 label-mode-padding = 1
 label-mode-foreground = ${colors.background}
 label-mode-background = ${colors.red}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-foreground = ${colors.yellow}
-label-focused-background = ${colors.background}
+label-focused = %name%
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.yellow}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %name%
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %name%
 label-visible-foreground = ${self.label-focused-foreground}
 label-visible-background = ${self.label-focused-background}
 label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-foreground = ${colors.red}
+label-urgent = %name%
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 1
 
 [module/cpu]
