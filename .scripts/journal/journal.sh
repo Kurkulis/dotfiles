@@ -21,7 +21,7 @@ sun=$(date --date="next Sunday" +"%a %d-%m-%Y")
 # whole path to file
 path=~/notes/journal/$year/$filename
 
-# whole path to file if year changed mid week
+# whole path to file if you open it mid week
 path_last_monday=~/notes/journal/$year_last_monday/$filename
 
 # current weekday
