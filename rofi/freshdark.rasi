@@ -8,7 +8,7 @@
     selected-normal-foreground:  rgba ( 172, 126, 65, 100 % );
     foreground:                  rgba ( 168, 153, 132, 100 % );
     normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 40, 40, 40, 100 % );
+    alternate-normal-background: @background;
     red:                         rgba ( 172, 65, 66, 100 % );
     selected-urgent-foreground:  rgba ( 255, 24, 68, 100 % );
     blue:                        rgba ( 38, 139, 210, 100 % );
@@ -17,13 +17,13 @@
     active-foreground:           @red;
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  @blue;
-    alternate-active-background: rgba ( 40, 40, 40, 100 % );
-    background:                  rgba ( 40, 40, 40, 100 % );
+    alternate-active-background: @background;
+    background:                  #14161b;
     bordercolor:                 rgba ( 40, 40, 40, 100 % );
     alternate-normal-foreground: @foreground;
-    normal-background:           rgba ( 40, 40, 40, 100 % );
+    normal-background:           @background;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 40, 40, 40, 100 % );
+    selected-normal-background:  @background;
     border-color:                @bordercolor;
     spacing:                     2;
     separatorcolor:              rgba ( 172, 126, 65, 100 % );
@@ -32,8 +32,8 @@
     alternate-urgent-foreground: @urgent-foreground;
     background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
-    active-background:           rgba ( 40, 40, 40, 100 % );
-    selected-active-background:  rgba ( 40, 40, 40, 100 % );
+    active-background:           @background;
+    selected-active-background:  @background;
 }
 #window {
     background-color: @background;
@@ -41,7 +41,6 @@
     padding:          5;
 }
 #mainbox {
-    border:  0;
     padding: 0;
 }
 #message {
@@ -55,7 +54,7 @@
 #listview {
     fixed-height: 0;
     border:       1px solid 0px 0px ;
-    border-color: @separatorcolor;
+    border-color: @border-color;
     spacing:      2px ;
     scrollbar:    true;
     padding:      2px 0px 0px ;
@@ -140,3 +139,4 @@
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
+
