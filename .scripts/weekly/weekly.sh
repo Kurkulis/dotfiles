@@ -4,19 +4,16 @@
 filename=week_$(date -d "last week" "+%V").md
 
 # current year
-year=$(date "+%Y")
+year=$(date -d "last monday" "+%Y")
 
 # whole path
-path=~/notes/reflections/weekly/$year/$filename
+path=~/notes/reflections/$year/weekly/$filename
 
 # file extension
 extension="${filename##*.}"
 
-if [ "$extension" == "md" ]; then
-   cp -n ~/.scripts/weekly/weekly_template.md $path;
+if [ -f "$path" ]; then
+    vim $path;
 else
-  echo "Template not found"
-  exit
+   cp -n ~/.scripts/weekly/weekly_template.md $path;
 fi
-
-vim $path
