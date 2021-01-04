@@ -15,5 +15,5 @@ extension="${filename##*.}"
 if [ -f "$path" ]; then
     vim $path;
 else
-   cp -n ~/.scripts/weekly/weekly_template.md $path;
+   cp -n ~/.scripts/weekly/weekly_template.md $path; vim $path;
 fi
