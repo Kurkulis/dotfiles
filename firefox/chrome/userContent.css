@@ -1,9 +1,16 @@
 :root {
-	scrollbar-width: thin !important; /* change to "none" to hide */
+  --color-about-blank: #1a1a1a;
+  scrollbar-width: thin !important;
+  /* change to "none" to hide */
 }
 
-@-moz-document url(about:privatebrowsing) {
-	:root {
-		scrollbar-width: thin !important; /* change to "none" to hide */
-	}
+@-moz-document url-prefix(about:blank) {
+  * {
+    background-color: var(--color-about-blank);
+  }
+
+  :root {
+    scrollbar-width: thin !important;
+    /* change to "none" to hide */
+  }
 }
