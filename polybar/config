@@ -1,12 +1,12 @@
 [colors]
-background = #181A21
-background-alt = #444
+background = #14161b
+background-alt = #4f483e
 foreground = #A89984
 foreground-alt = #555
-yellow = #AC7E41
-cyan = #41AC6A
-red = #ac4142
-green = #93AC41
+yellow = #d79921
+cyan = #689d6a
+red = #cc241d
+green = #98971a
 
 [bar/mybar]
 width = 100%
