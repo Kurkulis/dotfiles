@@ -10,7 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
@@ -89,8 +88,12 @@ imap <silent> <Up> <C-o>gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
-" Print current time with F#
-nmap <F3> i<C-R>=strftime("**klo %H:%M -** ")<CR><Esc>
+" Use system clipboard
+set clipboard=unnamedplus
+
+" If normal mode, insert new line and print current time with F3. If insert
+" mode, print current time with F3
+nmap <F3> o<C-R>=strftime("**klo %H:%M -** ")<CR>
 imap <F3> <C-R>=strftime("**klo %H:%M -** ")<CR>
 
 " 1 tab is 4 spaces
@@ -153,7 +156,7 @@ set statusline+=[%{GetMode()}]      " show mode
 set statusline+=%2*                 " change colors
 set statusline+=\ %t                " file name
 set statusline+=%3*                 " change colors
-set statusline+=%m                  " modified flag
+set statusline+=\ %m                " modified flag
 set statusline+=%2*                 " change colors
 set statusline+=%=                  " split alignment to right from here
 set statusline+=%l/%L               " line X of Y
@@ -166,7 +169,7 @@ function StatuslineMD()
     set statusline+=%2*             " change colors
     set statusline+=\ %t            " file name
     set statusline+=%3*             " change colors
-    set statusline+=%m              " modified flag
+    set statusline+=\ %m            " modified flag
     set statusline+=%2*             " change colors
     set statusline+=%=              " split alignment to right from here
     set statusline+=line\ %l\ of\ %L    " line X of Y
