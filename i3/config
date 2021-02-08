@@ -9,7 +9,8 @@ font pango: JetBrains Mono 10
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Lock the screen after inactivity
-# exec_always --no-startup-id xautolock -time 60 -locker "i3lock -c 000000"
+#exec_always --no-startup-id xautolock -time 30 -locker "i3lock -c 000000"
+exec_always --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 600  "i3lock -c 000000"
 
 # Lock the screen immediately
 bindsym $mod+Control+l exec i3lock -c 000000
@@ -18,7 +19,7 @@ bindsym $mod+Control+l exec i3lock -c 000000
 exec --no-startup-id redshift
 
 # Set desktop background with hsetroot
-exec --no-startup-id hsetroot -solid '#181A21'
+exec --no-startup-id hsetroot -solid '#14161b'
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -165,7 +166,7 @@ bindsym $mod+j gaps inner all toggle 20
 focus_follows_mouse no
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ac7e41 #ac7e41 #1d1f21 #ac7e41   #ac7e41
+client.focused          #4f483e #4f483e #1d1f21 #4f483e   #4f483e
 client.focused_inactive #282828 #282828 #ebdbb2 #282828   #282828
 client.unfocused        #282828 #282828 #ebdbb2 #282828   #282828
 client.urgent           #ac4142 #ac4142 #1d1f21 #900000   #ac4142
