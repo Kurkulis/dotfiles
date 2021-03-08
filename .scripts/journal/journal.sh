@@ -27,11 +27,11 @@ path_last_monday=~/notes/journal/$year_last_monday/$filename
 # current weekday
 today=$(date +"%A")
 
-if [ $today == "Monday" ]; then
+if [ $today = "Monday" ]; then
     if [ -f "$path" ]; then
         vim $path;
     else
-        echo -e "## $mon\n\n\n\n## $tue\n\n\n\n## $wed\n\n\n\n## $thu\n\n\n\n## $fri\n\n\n\n## $sat\n\n\n\n## $sun\n\n\n" >> $path; vim $path;
+        echo "## $mon\n\n\n\n## $tue\n\n\n\n## $wed\n\n\n\n## $thu\n\n\n\n## $fri\n\n\n\n## $sat\n\n\n\n## $sun\n\n\n" >> $path; vim $path;
     fi
 elif [ $today != "Monday" ]; then
     vim $path_last_monday;
