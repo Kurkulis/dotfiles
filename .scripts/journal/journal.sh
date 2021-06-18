@@ -27,6 +27,18 @@ path_last_monday=~/notes/journal/$year_last_monday/$filename
 # current weekday
 today=$(date +"%A")
 
+
+# Check if local repo is synced with remote repo
+remote=$(
+    git ls-remote -h origin master |
+    awk '{print $1}'
+)
+local=$(git rev-parse HEAD)
+
+if [[ $local != $remote ]]; then
+    git pull origin master;
+fi
+
 if [ $today = "Monday" ]; then
     if [ -f "$path" ]; then
         vim $path;
