@@ -48,13 +48,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-
-xrdb -merge ~/.Xresources 
-protonmail-bridge --noninteractive &
-pulseeffects --gapplication-service &
 picom &
-#xidlehook --not-when-fullscreen --not-when-audio --timer normal 600  "i3lock -c 000000" &
-exec i3
-
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+xrdb /home/emil/.Xresources
+hsetroot -solid "#0e141b"
+exec qtile
