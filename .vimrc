@@ -58,6 +58,9 @@ nnoremap <C-L> :nohl<CR><C-L>
 set ignorecase
 set smartcase
 
+" Set spellcheck
+set spell spelllang=en_gb
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -91,8 +94,11 @@ nmap <silent> <Up> gk
 " Use system clipboard
 set clipboard=unnamedplus,unnamed,autoselect
 
-" Insert heading with a timestamp and subject in markdown
+" Insert bolded text with a timestamp and subject in markdown
 imap <silent> <F1> <C-R>=strftime("**%H:%M:%S - **")<CR><C-o>:cal cursor(0,14)<CR>
+
+" Insert heading with todays date in markdown
+imap <silent> <F2> <C-R>=strftime("### %d-%m-%Y")<CR>
 
 " 1 tab is 4 spaces
 set tabstop=4
